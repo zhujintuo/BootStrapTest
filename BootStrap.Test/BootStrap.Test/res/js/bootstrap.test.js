@@ -874,7 +874,74 @@ $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', functio
     }
 
     Modal.prototype.hide=function(e){
-        
+        if(e) e.preventDefault();
+
+        e=$.Event('hide.bs.modal');
+        this.$element.trigger(e);
+        if(!this.isShown||e.isDefaultPrevented()) return;
+        this.isShown=false;
+        this.escape();
+        this.resize();
+        $(document).off('focusin.bs.modal');
+        this.$element
+            .removeClass('in')
+            .off('click.dismiss.bs.modal')
+            .off('mouseup.dismiss.bs.modal');
+
+        this.$dialog.off('mousedown.dismiss.bs.modal');
+        $.support.transition&&this.$element.hasClass('fade')?
+            tis.$element
+                .one('bsTransitionEnd',$.proxy(this.hideModal,this))
+                .emulateTransitionEnd(Modal.TRANSITION_DURATION);
+        this.hideModal();
+    }
+
+    Modal.prototype.enforceFocus=function(){
+        $(document)
+            .off('focusin.bs.modal')
+            .on('focusin.bs.modal',$.proxy(function(e){
+                if(this.$element[0]!==e.target&&!this.$element.has(e.target).length){
+                    this.$element.trigger('focus');
+                }
+            },this))
+    }
+
+    Modal.prototype.escape=function(){
+        if(this.isShown&&this.options.keyboard){
+            this.$element.on('keydown.dismiss.bs.modal',$.proxy(function(e){
+                e.which==27&&this.hide();
+            },this))
+        }else if(!this.isShown){
+            this.$element.off('keydown.dismiss.bs.modal');
+        }
+    }
+
+    Modal.prototype.resize=function(){
+        if(this.isShown){
+            $(window).on('resize.bs.modal',$.proxy(this.handleUpdate,this));
+        }else{
+            $(window).off('resize.bs.modal');
+        }
+    }
+
+    Modal.prototype.hideModal=function(){
+        var that=this;
+        this.$element.hide();
+        this.backdrop(function(){
+            that.$body.removeClass('modal-open');
+            that.resetAdjustments();
+            that.resetScrollbar();
+            that.$element.trigger('hideen.bs.modal');
+        });
+    }
+
+    Modal.prototype.removeBackdrop=function(){
+        this.$backdrop&&this.$backdrop.remove();
+        this.$backdrop=null;
+    }
+
+    Modal.prototype.backdrop=function(callback){
+        var that=this;
     }
 }(jQuery);
  
