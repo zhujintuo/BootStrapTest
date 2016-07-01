@@ -1,0 +1,29 @@
+﻿1.box-sizing 
+  -moz-box-sizing 
+  -webkit-box-sizing
+
+2.-webkit-overflow-scrolling:touch    
+  HTML5 for Mobile 网页内都有快速滚动和回弹的效果
+
+3.overflow-x overflow-y
+
+4.transition 单位:deg 度
+  -ms-transform:rotate(9deg); /* Internet Explorer */
+  -moz-transform:rotate(9deg); /* Firefox */
+  -webkit-transform:rotate(9deg); /* Safari 和 Chrome */
+  -o-transform:rotate(9deg); /* Opera */
+
+5.background-clip
+  -moz-background-clip
+  -webkit-background-clip
+  -o-background-clip
+
+6.box-shadow 属性向框添加一个或多个阴影
+  -moz-box-shadow
+
+7.border-radius 该属性允许您为元素添加圆角边框
+  -moz-border-radius
+
+8.outline（轮廓）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用
+
+9.

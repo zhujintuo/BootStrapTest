@@ -59,6 +59,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="html\Dropdown.html" />
+    <Content Include="html\-webkit-overflow-scrolling.html" />
+    <Content Include="note\TextFile1.txt" />
     <Content Include="res\css\bootstrap-theme.css" />
     <Content Include="res\css\bootstrap-theme.min.css" />
     <Content Include="res\css\bootstrap.css" />
