@@ -1083,7 +1083,76 @@ $(document).on('click.bs.collapse.data-api', '[data-toggle="collapse"]', functio
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
++function($){
+    'use strict';
 
+    var Tooltip=function(element,options){
+        this.type=null;
+        this.options=null;
+        this.enabled=null;
+        this.timeout=null;
+        this.hoverState=null;
+        this.$element=null;
+        this.inState=null;
+
+        this.init('tooltip',element,options);
+    }
+
+    Tooltip.VERSION='3.3.5';
+    Tooltip.TRANSITION_DURATION=150;
+    Tooltip.DEFAULTS={
+        animate:true,
+        placement:'top',
+        selector:false,
+        template:'<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
+        trigger:'hover focus',
+        title:'',
+        delay:0,
+        html:false,
+        container:false,
+        viewport:{
+            selector:'body',
+            padding:0
+        }
+    };
+
+    Tooltip.prototype.init=function(type,element,options){
+        this.enabled=true;
+        this.type=type;
+        this.$element=$(element);
+        this.options=this.getOptions(options);
+        this.$viewport=this.options.viewport&&$($.isFunction(this.options.viewport)?this.options.viewport.call(this,this.$element):(this.options.viewport.selector||thhis.options.viewport));
+    }
+
+    Tooltip.prototype.getDefaults=function(){
+        return Tooltip.DEFAULTS;
+    }
+
+    Tooltip.prototype.getOptions=function(options){
+        
+    }
+
+    function Plugin(option){
+        return this.each(function(){
+            var $this=$(this);
+            var data=$this.data('bs.tooltip');
+            var options=typeof option=='object'&&option;
+
+            if (!data && /destroy|hide/.test(option)) return;
+            if(!data) $this.data('bs.tooltip',(data=new Tooltip(this,options)));
+            if(typeof option=='string') data[option]();
+        });
+    }
+
+    var old = $.fn.tooltip;
+    $.fn.tooltip= Plugin;
+    $.fn.tooltip.Constructor = Tooltip;
+
+    $.fn.tooltip.noConflict = function () {
+        $.fn.tooltip = old;
+        return this;
+    }
+}(jQuery);
 
  
  
