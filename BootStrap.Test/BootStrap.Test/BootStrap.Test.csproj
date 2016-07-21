@@ -58,10 +58,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="html\Dropdown.html" />
-    <Content Include="html\-webkit-overflow-scrolling.html" />
-    <Content Include="html\HTML布局规则\Alert.html" />
-    <Content Include="html\Modal.html" />
+    <Content Include="html\2\3列偏移和列排序.html" />
+    <Content Include="html\1\Dropdown.html" />
+    <Content Include="html\1\-webkit-overflow-scrolling.html" />
+    <Content Include="html\1\Modal.html" />
+    <Content Include="html\2\2清除浮动问题.html" />
+    <Content Include="html\2\1跨设备组合定义.html" />
+    <Content Include="html\2\4颜色.html" />
+    <Content Include="html\2\5尺寸.html" />
     <Content Include="note\common.txt" />
     <Content Include="res\css\bootstrap-theme.css" />
     <Content Include="res\css\bootstrap-theme.min.css" />

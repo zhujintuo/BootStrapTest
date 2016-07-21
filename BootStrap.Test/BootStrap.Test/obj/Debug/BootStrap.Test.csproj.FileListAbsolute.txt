@@ -1,0 +1,6 @@
+E:\github\bootstraptest\BootStrap.Test\BootStrap.Test\bin\BootStrap.Test.dll.config
+E:\github\bootstraptest\BootStrap.Test\BootStrap.Test\bin\BootStrap.Test.dll
+E:\github\bootstraptest\BootStrap.Test\BootStrap.Test\bin\BootStrap.Test.pdb
+E:\github\bootstraptest\BootStrap.Test\BootStrap.Test\obj\Debug\BootStrap.Test.csprojResolveAssemblyReference.cache
+E:\github\bootstraptest\BootStrap.Test\BootStrap.Test\obj\Debug\BootStrap.Test.dll
+E:\github\bootstraptest\BootStrap.Test\BootStrap.Test\obj\Debug\BootStrap.Test.pdb
