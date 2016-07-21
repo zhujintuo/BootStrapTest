@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial=1" />
+    <title>Alert</title>
+    <meta charset="utf-8" />
+    <link href="../../res/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../res/js/jquery-3.0.0.js"></script>
+    <script src="../../res/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="alert">
+        <button type="button" class="close" data-dissmiss="alert">&times;</button>
+        <strong>警告！</strong>你输入的项目部合法！
+    </div>
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">我的书籍<span class="caret"></span></button>
+    
+        <ul class="dropdown-menu">
+            <li><a href="#">JavaScript编程精解</a></li>
+            <li><a href="#">JavaScript设计模式</a></li>
+            <li><a href="#">JavaScript启示录</a></li>
+            <li class="divider"></li>
+            <li><a href="#">深入理解Bootstrap3</a></li>
+        </ul>
+    </div>
+
+    <ul class="nav nav-tabs" id="myTab">
+        <li class="active"><a data-toggle="tab" href="#home">首页</a></li>
+        <li class=""><a data-toggle="tab" href="#profile">个人资料</a></li>
+        <li class="dropdown">
+            <a data-toggle="dropdown" href="#" class="dropdown-toggle">我的书籍<b class="alert"></b></a>
+            <ul class="dropdown-menu">
+                <li><a data-toggle="tab" href="#dropdown1">JavaScript编程精解</a></li>
+                <li><a data-toggle="tab" href="#dropdown2">JavaScript设计模式</a></li>
+                <li><a data-toggle="tab" href="#dropdown3">JavaScript启示录</a></li>
+                <li><a data-toggle="tab" href="#dropdown4">深入理解Bootstrap</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div id="home" class="tab-pane fade active in"><p>单击“首页”时显示该区域</p></div>
+        <div id="profile" class="tab-pane fade"><p>单击“个人资料”时显示该区域</p></div>
+        <div id="dropdown1" class="tab-pane fade"><p>单击“JavaScript编程精解”时显示该区域</p></div>
+        <div id="dropdown2" class="tab-pane fade"><p>单击“JavaScript设计模式”时显示该区域</p></div>
+        <div id="dropdown3" class="tab-pane fade"><p>单击“JavaScript启示录”时显示该区域</p></div>
+        <div id="dropdown4" class="tab-pane fade"><p>深入理解Bootstrap</p></div>
+    </div>
+</body>
+</html>
