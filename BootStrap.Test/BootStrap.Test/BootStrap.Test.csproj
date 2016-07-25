@@ -67,6 +67,10 @@
     <Content Include="html\2\4颜色.html" />
     <Content Include="html\2\5尺寸.html" />
     <Content Include="html\2\6Alert.html" />
+    <Content Include="html\3\3\1code.html" />
+    <Content Include="html\3\5\1form.html" />
+    <Content Include="html\3\5\2from.html" />
+    <Content Include="html\3\5\3fromControl.html" />
     <Content Include="note\common.txt" />
     <Content Include="res\css\bootstrap-theme.css" />
     <Content Include="res\css\bootstrap-theme.min.css" />
