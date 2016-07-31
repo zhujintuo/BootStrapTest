@@ -73,6 +73,8 @@
     <Content Include="html\3\5\3fromControl.html" />
     <Content Include="html\4\1caret.html" />
     <Content Include="html\4\2progress.html" />
+    <Content Include="html\5\2Modal.html" />
+    <Content Include="html\5\8Alter.html" />
     <Content Include="note\common.txt" />
     <Content Include="res\css\bootstrap-theme.css" />
     <Content Include="res\css\bootstrap-theme.min.css" />
@@ -179,6 +181,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
