@@ -83,7 +83,9 @@
     <Content Include="html\test\1\favicon.ico" />
     <Content Include="html\test\1\ie-emulation-modes-warning.js" />
     <Content Include="html\test\1\index.html" />
-    <Content Include="html\test\DateTime.html" />
+    <Content Include="html\test\2\bootstrap-datetimepicker.js" />
+    <Content Include="html\test\2\bootstrap-datetimepicker.min.js" />
+    <Content Include="html\test\2\DateTime.html" />
     <Content Include="note\common.txt" />
     <Content Include="res\css\bootstrap-theme.css" />
     <Content Include="res\css\bootstrap-theme.min.css" />
@@ -190,7 +192,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="html\test\2\locales\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
