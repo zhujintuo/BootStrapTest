@@ -73,8 +73,17 @@
     <Content Include="html\3\5\3fromControl.html" />
     <Content Include="html\4\1caret.html" />
     <Content Include="html\4\2progress.html" />
+    <Content Include="html\5\11carousel.html" />
     <Content Include="html\5\2Modal.html" />
     <Content Include="html\5\8Alter.html" />
+    <Content Include="html\5\Affix.html" />
+    <Content Include="html\test\1\bootstrap.min.css" />
+    <Content Include="html\test\1\bootstrap.min.js" />
+    <Content Include="html\test\1\dashboard.css" />
+    <Content Include="html\test\1\favicon.ico" />
+    <Content Include="html\test\1\ie-emulation-modes-warning.js" />
+    <Content Include="html\test\1\index.html" />
+    <Content Include="html\test\DateTime.html" />
     <Content Include="note\common.txt" />
     <Content Include="res\css\bootstrap-theme.css" />
     <Content Include="res\css\bootstrap-theme.min.css" />
